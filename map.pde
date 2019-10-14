@@ -32,16 +32,16 @@ void draw(){
     float Lat = map(float(myData[i][2]), -0.31, 1.4, 0, height);
     float markerSize = 3;
     if(float(myData[i][3])>=3){
-      fill(100,200,100,200); //green
+      fill(100,200,100,200); //green if battery is 3,4,5
       ellipse(Long, Lat, markerSize, markerSize);
     }else{
-      fill(255, 0, 0, 50); //red
+      fill(255, 0, 0, 50); //red if battery is 0,1,2
       ellipse(Long, Lat, markerSize, markerSize);
     }
    }
    
-   fill(100, 100, 200, 50);
+   fill(100, 100, 200, 50); //blue
    float busX = map(0.19,-0.31,1.4,0,width);
    float busY = map(0.19,-0.31,1.4,0,height);
-   ellipse(busX, busY, 40, 40);
+   ellipse(busX, busY, 40, 40); //bus
 }
